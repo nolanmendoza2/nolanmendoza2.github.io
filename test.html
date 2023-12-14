@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cactus Care Preferences</title>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #26cc7c;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #ffffff;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .center{
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .product {
+            border: 1px  #ccc;
+            padding: 10px;
+            margin: 10px;
+            text-align: left;
+            font-size: 20px
+ 
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    <h1>Find your perfect match</h1>
+    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scrolling Text Box Example</title>
+    </head>
+    <body>
+        <marquee behavior="scroll" direction="left" scrollamount="8">
+            Next Event: TBA 00/00/00
+        </marquee>
+    </body>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Plants.html">Plants</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="test.html">Survey</a></li>
+        </ul>
+    </nav>
+    <form id="cactus-care-form">
+        <div class="product">
+        <label for="light">1. Preferred Light Conditions:</label>
+        <select id="light" name="light">
+            <option value="full-sun">Full Sun</option>
+            <option value="partial-sun">Partial Sun</option>
+            <option value="shade">Shade</option>
+        </select>
+        </div>
+        
+        <div class="product">
+        <label for="water">2. How Often Do You Want to Water Your Cactus?</label>
+        <select id="water" name="water">
+            <option value="once-a-week">Once a week</option>
+            <option value="once-every-two-weeks">Once every two weeks</option>
+            <option value="once-a-month">Once a month</option>
+        </select>
+        </div>
+
+        <div class="product">
+        <label for="size">3. Preferred Cactus Size:</label>
+        <input type="radio" id="small" name="size" value="small">
+        <label for="small">Small</label>
+        <input type="radio" id="medium" name="size" value="medium">
+        <label for="medium">Medium</label>
+        <input type="radio" id="large" name="size" value="large">
+        <label for="large">Large</label>
+        </div>
+
+        <div class="product">
+        <button type="button" id="submit-button">Find my match</button>
+        </div>
+    </form>
+
+    
+    <div id="result">
+      
+        <img id="cactusImage" src="" >
+        <p id="suggestion"></p>
+    </div>
+
+<div>
+    <script>
+        document.getElementById("submit-button").addEventListener("click", function () {
+            const light = document.getElementById("light").value;
+            const water = document.getElementById("water").value;
+            const size = document.querySelector('input[name="size"]:checked').value;
+            if (light === "full-sun" & water === "once-a-week" & size === "small") {
+            suggestion = "Moon Cactus";
+            cactusImageSrc = "plant23.jfif";}
+            else if (light === "full-sun" & water === "once-every-two-weeks" & size === "small") 
+            {
+            suggestion = "Monkey-Tail";
+            cactusImageSrc = "plant2.jpg";}
+            else if (light === "full-sun" & water === "once-a-month" & size === "small")
+            {
+            suggestion = "Old Man Cactus";
+            cactusImageSrc = "plant3.jpg";}
+            else if (light === "partial-sun" & water === "once-a-week" & size === "small")
+            {
+            suggestion = "String Of Hearts";
+            cactusImageSrc = "plant4.jfif";}
+            else if (light === "partial-sun" & water === "once-a-month" & size === "small")
+            {
+            suggestion = "String Of Pearls";
+            cactusImageSrc = "plant5.jfif";}
+            else if (light === "partial-sun" & water === "once-every-two-weeks" & size === "small")
+            {
+            suggestion = "Mermaid Tail";
+            cactusImageSrc = "plant6.jpg";}
+            else if (light === "shade" & water === "once-a-week" & size === "small")
+            {
+            suggestion = "Pink Witch";
+            cactusImageSrc = "plant7.jfif";}
+            else if (light === "shade" & water === "once-a-month" & size === "small")
+            {
+            suggestion = "Black Rose";
+            cactusImageSrc = "plant8.jfif";}
+            else if (light === "shade" & water === "once-every-two-weeks" & size === "small")
+            {
+            suggestion = "Peyote";
+            cactusImageSrc = "plant9.jfif";}
+            /////////////////////////////////////////////////////////////////////////////////////
+            else if (light === "full-sun" & water === "once-a-week" & size === "medium") 
+            {
+            suggestion = "Starfish Cactus";
+            cactusImageSrc = "plant10.jfif";}
+            else if (light === "full-sun" & water === "once-every-two-weeks" & size === "medium") 
+            {
+            suggestion = "Brain Cactus";
+            cactusImageSrc = "plant11.jfif";}
+            else if (light === "full-sun" & water === "once-a-month" & size === "medium")
+            {
+            suggestion = "Bunny Ear Cactus";
+            cactusImageSrc = "plant12.jfif";}
+            else if (light === "partial-sun" & water === "once-a-week" & size === "medium")
+            {
+            suggestion = "Golden Barrel Cactus";
+            cactusImageSrc = "plant13.jfif";}
+            else if (light === "partial-sun" & water === "once-a-month" & size === "medium")
+            {
+            suggestion = "Split Rock Succulent";
+            cactusImageSrc = "plant14.jfif";}
+            else if (light === "partial-sun" & water === "once-every-two-weeks" & size === "medium")
+            {
+            suggestion = "Lola Cactus";
+            cactusImageSrc = "plant15.jpg";}
+            else if (light === "shade" & water === "once-a-week" & size === "medium")
+            {
+            suggestion = "Rose Cactus";
+            cactusImageSrc = "plant16.jpg";}
+            else if (light === "shade" & water === "once-a-month" & size === "medium")
+            {
+            suggestion = "Atlantis Cactus";
+            cactusImageSrc = "plant17.jpg";}
+            else if (light === "shade" & water === "once-every-two-weeks" & size === "medium")
+            {
+            suggestion = "Spiral Aloe";
+            cactusImageSrc = "plant18.jpg";}
+            /////////////////////////////////////////////////////////////////////////////////////
+            else if (light === "full-sun" & water === "once-a-week" & size === "large") 
+            {
+            suggestion = "Tiger Tooth Cactus";
+            cactusImageSrc = "plant19.jpg";}
+            else if (light === "full-sun" & water === "once-every-two-weeks" & size === "large") 
+            {
+            suggestion = "Old Lady Cactus";
+            cactusImageSrc = "plant20.jfif";}
+            else if (light === "full-sun" & water === "once-a-month" & size === "large")
+            {
+            suggestion = "Balloon Cactus";
+            cactusImageSrc = "plant21.jfif";}
+            else if (light === "partial-sun" & water === "once-a-week" & size === "large")
+            {
+            suggestion = "Christmas Cactus";
+            cactusImageSrc = "plant22.jfif";}
+            else if (light === "partial-sun" & water === "once-a-month" & size === "large")
+            {
+            suggestion = "Spiral Cactus";
+            cactusImageSrc = "plant1.jpg";}
+            else if (light === "partial-sun" & water === "once-every-two-weeks" & size === "large")
+            {
+            suggestion = "Bishop's Cap Cactus";
+            cactusImageSrc = "plant24.jfif";}
+            else if (light === "shade" & water === "once-a-week" & size === "large")
+            {
+            suggestion = "San Pedro Cactus";
+            cactusImageSrc = "plant25.jfif";}
+            else if (light === "shade" & water === "once-a-month" & size === "large")
+            {
+            suggestion = "Saguaro Cactus";
+            cactusImageSrc = "plant26.jfif";}
+            else if (light === "shade" & water === "once-every-two-weeks" & size === "large")
+            {
+            suggestion = "Strawberry Cactus";
+            cactusImageSrc = "plant27.jfif";}
+            /////////////////////////////////////////////////////////////////////////////////////
+            else {
+            suggestion = "Suggestion cannot be made";
+            }
+          
+                // Display the suggestion
+            //document.getElementById("suggestion").textContent = suggestion;
+            
+            var resultDiv = document.getElementById("result");
+            var suggestionParagraph = document.getElementById("suggestion");
+            var cactusImage = document.getElementById("cactusImage");
+            
+            suggestionParagraph.textContent = "We suggest: " + suggestion;
+            cactusImage.src = cactusImageSrc;
+           
+            
+        });
+    </script>
+    </div>
+        <footer>
+            &copy; 2023 Succulent Store
+        </footer>
+ 
+</body>
+
+</html>
